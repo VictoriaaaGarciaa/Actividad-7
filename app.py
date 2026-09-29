@@ -1,5 +1,6 @@
 import streamlit as st
-st.title ("Evaluación de un lote")
+
+st.title("Evaluación de un lote")
 
 pH = st.number_input(
     "pH",
@@ -13,6 +14,11 @@ temperatura = st.number_input(
 
 if st.button("Evaluar"):
 
-    # Completa aquí la lógica
+    if pH < 6.0 or pH > 7.0:
+        resultado = "Revisar pH"
+    elif temperatura < 20 or temperatura > 25:
+        resultado = "Revisar temperatura"
+    else:
+        resultado = "Lote aceptable"
 
     st.write(f"Resultado: {resultado}")

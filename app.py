@@ -1,6 +1,7 @@
 import streamlit as st
 
-st.title("Evaluación de un lote")
+st.sidebar.title("Evaluación de un lote")
+st.sidebar.write("Andrea Victoria Garcia Ochoa, 3L, Facultad de Ciencias Químicas")
 
 pH = st.number_input(
     "pH",
@@ -22,3 +23,4 @@ if st.button("Evaluar"):
         resultado = "Lote aceptable"
 
     st.write(f"Resultado: {resultado}")
+    
